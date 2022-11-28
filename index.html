@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<title>Calculadora Lógica</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- Bootstrap -->
+			<!-- CSS only -->
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+			<!-- JavaScript Bundle with Popper -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+		<!-- JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Default Stylesheet -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/light.css">
+		<link rel="stylesheet" href="css/dark.css">
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	</head>
+
+	<body id="body">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<img src="./src/logo.png" alt="" width="44" height="44" class="d-inline-block align-text-top">
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="./index.html">Calculadora de Lógica Proposicional</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./about.html">Equipe</a>
+					</li>
+					</ul>
+				</div>
+								<!-- Switch para o tema escuro -->
+				<div class="form-check form-switch">
+					<input type="checkbox" class="form-check-input" id="darkSwitch">
+					<label for="darkSwitch" id="labelDarkSwitch">Mudar o tema</label>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Calculadora -->
+		<div class="container d-flex justify-content-center" style="margin-top:2em;">
+			<div class="calculator">					
+				<form>
+					<textarea readonly id="display1" class="form-control text-right"></textarea>
+				</form>
+
+				<div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operand-group" onclick="insert('A')">A</button>
+						<button type="button" class="operand-group" onclick="insert('B')">B</button>
+						<button type="button" class="operand-group" onclick="insert('C')">C</button>
+						<button type="button" class="operand-group" onclick="insert('D')">D</button>
+						<button type="button" class="operand-group" onclick="insert('E')">E</button>
+						<button type="button" class="operand-group" onclick="insert('F')">F</button>
+						<button type="button" class="operand-group" onclick="insert('G')">G</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operand-group" onclick="insert('H')">H</button>
+						<button type="button" class="operand-group" onclick="insert('I')">I</button>
+						<button type="button" class="operand-group" onclick="insert('J')">J</button>
+						<button type="button" class="operand-group" onclick="insert('K')">K</button>
+						<button type="button" class="operand-group" onclick="insert('L')">L</button>
+						<button type="button" class="operand-group" onclick="insert('M')">M</button>
+						<button type="button" class="operand-group" onclick="insert('N')">N</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operand-group" onclick="insert('O')">O</button>
+						<button type="button" class="operand-group" onclick="insert('P')">P</button>
+						<button type="button" class="operand-group" onclick="insert('Q')">Q</button>
+						<button type="button" class="operand-group" onclick="insert('R')">R</button>
+						<button type="button" class="operand-group" onclick="insert('S')">S</button>
+						<button type="button" class="operand-group" onclick="insert('T')">T</button>
+						<button type="button" class="operand-group" onclick="insert('U')">U</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operand-group" onclick="insert('V')">V</button>
+						<button type="button" class="operand-group" onclick="insert('W')">W</button>
+						<button type="button" class="operand-group" onclick="insert('X')">X</button>
+						<button type="button" class="operand-group" onclick="insert('Y')">Y</button>
+						<button type="button" class="operand-group" onclick="insert('Z')">Z</button>
+						<button id="true" type="button" onclick="insert('[Verdadeiro]')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Verdadeiro">V</button>
+						<button id="false" type="button" onclick="insert('[Falso]')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Falso">F</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operator-group" onclick="insert('∧')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Conjunção (e)">∧</button>
+						<button type="button" class="operator-group" onclick="insert('∨')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Disjunção (ou)">∨</button>
+						<button type="button" class="operator-group" onclick="insert('∼')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Negação">∼</button>
+						<button type="button" class="operator-group" onclick="insert('⊻')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Disjunção exclusiva (ou... ou...)">⊻</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button type="button" class="operator-group" onclick="insert('(')">(</button>
+						<button type="button" class="operator-group" onclick="insert(')')">)</button>
+						<button type="button" class="operator-group" onclick="insert('→')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Condicional (se... então)">→</button>
+						<button type="button" class="operator-group" onclick="insert('↔')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Bicondicional (se e somente se)">↔</button>
+					</div>
+					<div class="d-flex justify-content-between button-row">
+						<button id="equal" type="button" onclick="calculate()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Calcular resultado">CALCULAR PROPOSIÇÕES</button>
+						<button id="clear" type="button" class="function-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Limpar" onclick="clear_screen()">LIMPAR</button>
+						<button id="backspace" type="button" class="function-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-delay='{"show":500,"hide":100}' data-bs-title="Apagar" onclick="backspace()">⌫</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Espaço para exibição do resultado -->
+		<div class="container">
+			<div>
+				<h6 id="table-test">
+
+				</h6>
+			</div>
+			<div id="result">
+
+			</div>
+		</div>
+
+		<!-- Funções -->
+		<script src="./js/main.js" type="text/javascript"></script>
+		<script>
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+		</script>
+	</body>
+</html>

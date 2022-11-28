@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Calculadora Lógica</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://www.jqueryscript.net/css/jquerysctipttop.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Default Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/light.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img
+          src="./src/logo.png"
+          alt=""
+          width="44"
+          height="44"
+          class="d-inline-block align-text-top"
+        />
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Calculadora de Lógica Proposicional</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./about.html">Equipe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="content">
+        <hr />
+        <div id="lipsum">
+          <h3>
+            <p><b>Universidade de Fortaleza (UNIFOR)</b></p>
+          </h3>
+          <h4><p>Trabalho de <b>Avaliação Formativa</b>.</p></h4>
+          <p><b>Curso:</b> Análise e Desenvolvimento de Sistemas</p>
+          <p><b>Disciplina:</b>́ Matemática para Computação (T146)</p>
+          <p><b>Professor:</b> José Rubens Rodrigues de Sousa</p>
+          <p><b>Alunos:</b></p>
+          <p>
+            Amanda Nogueira Rocha (2224675)<br />
+            Doris Maria Reck Tavares (2223791)<br />
+            Fernando Custódio Saraiva Leão de Albuquerque (2224632)<br />
+            Paulo Vinicius Gonçalves Holanda Amorim (2223900)
+          </p>
+        </div>
+        <hr />
+      </div>
+    </div>
+
+    <!-- Funções -->
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* --------------------------------- Layout ---------------------------------*/
+
+.calculator {
+  width: 800px;
+  padding: 12px;
+}
+
+button {
+  width: 13%;
+  height: 90%;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 30px;
+  outline: none !important;
+  position: relative;
+  transition: all 0.5s;
+}
+
+button.operator-group {
+  font-size: 20px !important;
+	width: 24%;
+}
+
+button.operand-group,
+
+button#ans,
+button#true,
+button#false {
+  font-size: 20px !important;
+}
+
+button.ghost-group {
+  visibility: hidden;
+}
+
+button#backspace {
+  font-size: 20px !important;
+  width: 24%;
+}
+
+button#clear {
+  font-size: 20px !important;
+  width: 24%;
+}
+
+button#equal {
+  font-size: 20px !important;
+  width: 49.5%;
+}
+
+#display1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  height: 5em;
+}
+
+.button-row {
+  margin-top: 0.5em;
+  height: 2.7em;
+}
+
+form {
+  width: 100%;
+  border-radius: 5%;
+}
+
+form input {
+  background-color: inherit;
+  border: none;
+  width: 294px;
+  margin: 0 auto;
+  display: block;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+#answer-table {
+  font-family: "Roboto", sans-serif;
+}
+
+#table-test {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#content {
+  position: relative;
+  text-align: center;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+p {
+  text-align: justify;
+  margin: 0 0 15px 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
+}
+
+hr {
+  clear: both;
+  border: 0;
+  height: 1px;
+}
